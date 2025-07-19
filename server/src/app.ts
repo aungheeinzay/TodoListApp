@@ -5,12 +5,12 @@ import mongoose from 'mongoose';
 import todoRouter from "./routes/todo"
 
 dotenv.config({
-    path:'.env'
+    path:'./.env'
 })
 const app = express()
 
 app.use(cors({
-    origin:process.env.CLIENT_URL
+    origin: process.env.CLIENT_URL  // Allow requests from the client URL
 }))
 app.use(json())
 app.use(urlencoded({extended:true}))
